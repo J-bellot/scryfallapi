@@ -21,5 +21,3 @@ function printJson($data) {
 
 printJson($data);
 */
-
-?>

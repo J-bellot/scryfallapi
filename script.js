@@ -18,6 +18,7 @@ window.onload = () => {
 
     const searchBar = document.getElementById("search-bar")
     const results_div = document.getElementById('results')
+    const decklist = document.getElementById('decklist')
 
     searchBar.oninput = function (){
         const value = searchBar.value;
@@ -32,6 +33,9 @@ window.onload = () => {
                         const result = document.createElement("div")
                         result.setAttribute('class', 'resultat')
                         result.innerHTML = list_cartes[i]
+                        result.onclick = function (){
+                            decklist.value += list_cartes[i]+"\n"
+                        }
                         results_div.appendChild(result)
                     }else {
                         break
