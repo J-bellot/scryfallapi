@@ -10,7 +10,6 @@ window.onload = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const fileContent = xhr.responseText;
             list_cartes = fileContent.split('\n')
-            console.log(list_cartes)
         }
     };
     xhr.send();
@@ -26,9 +25,7 @@ window.onload = () => {
 
         if (value !== ""){
             let results = 0
-            // parcourez la liste
             for(let i=0; i < list_cartes.length; i++) {
-                // utilisez indexOf pour vérifier si la valeur est présente dans chaque élément
                 if(list_cartes[i].toLowerCase().startsWith(value.toLowerCase())) {
                     if (results < 10){
                         results++
@@ -43,7 +40,6 @@ window.onload = () => {
             }
         }
     }
-
 }
 
 
